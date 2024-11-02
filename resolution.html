@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="css/resolution.css" />
+    <title>Set Resolution</title>
+  </head>
+  <body>
+    <header>
+      <h2 class="clock">00:00</h2>
+      <div class="resolution">
+        <span></span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="home.html">Home</a></li>
+          <li><a href="resolution.html">Resolutions</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <form class="resolution-form">
+        <input
+          class="resolution-form__input"
+          type="text"
+          required
+          placeholder="Add your resolutions." />
+        <input
+          class="resolution-form__add"
+          type="submit"
+          value="Add" />
+      </form>
+    </main>
+    <script src="js/clock.js"></script>
+    <script src="js/resolution.js"></script>
+  </body>
+</html>
