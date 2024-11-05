@@ -1,0 +1,196 @@
+.home-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  z-index: 10;
+}
+
+.todo-list {
+  padding: 10px;
+  width: 500px;
+  height: 700px;
+  border: 4px solid;
+  overflow: auto;
+  border-radius: 20px;
+  background-color: #ffc300;
+  margin-right: 40px;
+  button i {
+    pointer-events: none; /* 아이콘 자체는 클릭 이벤트를 발생시키지 않도록 설정  */
+  }
+
+  li {
+    display: flex;
+    justify-content: space-between;
+    padding: 7px;
+    margin: 5px 0px;
+    background-color: white;
+    border-radius: 20px;
+  }
+  li button {
+    border: none;
+    border-radius: 50px;
+    background-color: #90e0ef;
+    opacity: 0.5;
+  }
+
+  li button:hover {
+    opacity: 1;
+    transition: 0.1s ease-in-out;
+  }
+
+  li:hover {
+    background-color: #e5e5e5;
+  }
+}
+
+.home-box__right {
+  border: 4px solid;
+  border-radius: 20px;
+  height: 700px;
+  width: 700px;
+  overflow: hidden;
+}
+
+.home-box__right__top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2.5px solid;
+  padding: 15px;
+}
+
+.clock {
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  font-weight: bold;
+
+  :first-child {
+    padding: 3px;
+  }
+
+  :last-child {
+    padding: 3px;
+  }
+}
+
+.home-box__right__bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background-color: #ffb703;
+}
+
+.username {
+  margin-top: 10px;
+  font-size: 25px;
+}
+
+.todo-form {
+  margin-top: 200px;
+  height: 100%;
+}
+
+.todo-form__input {
+  border: none;
+  outline: none;
+  width: 250px;
+  height: 50px;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 17px;
+}
+
+.todo-form__input::placeholder {
+  opacity: 0.5;
+}
+
+.todo-form__submit {
+  margin-left: 10px;
+  border: none;
+  width: 80px;
+  height: 50px;
+  border-radius: 20px;
+  padding: 10px;
+  font-size: 17px;
+  outline: none;
+}
+
+.todo-form__submit:hover {
+  background-color: #fb8500;
+  transition: 0.1s ease-in-out;
+}
+
+.todo-form__submit:active {
+  background-color: #90e0ef;
+}
+
+.name-form {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  background-color: #fefae0;
+  z-index: 1;
+}
+
+.name-form__input {
+  border: none;
+  width: 290px;
+  height: 60px;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 20px;
+  background-color: #faedcd;
+  outline: none;
+  box-shadow: 5px 5px 3px #666;
+  margin-right: 30px;
+}
+
+.name-form__input::placeholder {
+  opacity: 0.5;
+}
+
+.name-form__submit {
+  border: none;
+  width: 150px;
+  height: 60px;
+  border-radius: 20px;
+  padding: 20px;
+  font-size: 18px;
+  background-color: #d4a373;
+  outline: none;
+  box-shadow: 5px 5px 3px #666;
+}
+
+.name-form__submit:hover {
+  background-color: #dda15e;
+}
+
+.name-form__submit:active {
+  background-color: #fb8500;
+}
+
+.hidden {
+  display: none;
+}
+
+* {
+  box-sizing: border-box;
+}

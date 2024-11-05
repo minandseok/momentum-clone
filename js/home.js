@@ -1,11 +1,27 @@
-const toDoForm = document.querySelector(".todo-form");
-const toDoInput = document.querySelector(".todo-form__input");
-const toDoAdd = document.querySelector("todo-form__add");
+const nameForm = document.querySelector(".name-form");
+const nameFormInput = document.querySelector(".name-form__input");
+const userName = document.querySelector(".username");
 
-const USERNAME_KEY = "username"
+const HIDDEN_CLASSNAME = "hidden";
+const USERNAME_KEY = "username";
 
-const handleSubmit = (e) => {
-  e.preventDefault();
+const handleNameSubmit = (event) => {
+  event.preventDefault();
+  nameForm.classList.add(HIDDEN_CLASSNAME);
+  const inputUserName = nameFormInput.value;
+  localStorage.setItem(USERNAME_KEY, inputUserName);
+  showName(inputUserName);
 };
 
-toDoInput.addEventListener("submit", handleSubmit);
+const showName = (savedUserName) => {
+  userName.innerText = savedUserName;
+};
+
+const savedUserName = localStorage.getItem(USERNAME_KEY);
+
+if (savedUserName === null) {
+  nameForm.classList.remove(HIDDEN_CLASSNAME);
+  nameForm.addEventListener("submit", handleNameSubmit);
+} else {
+  showName(savedUserName);
+}

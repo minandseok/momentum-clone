@@ -7,39 +7,70 @@
       content="width=device-width, initial-scale=1.0" />
     <link
       rel="stylesheet"
-      href="css/style.css" />
+      href="./css/reset.css" />
     <link
       rel="stylesheet"
       href="css/home.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
     <title>Momentum</title>
   </head>
   <body>
-    <header>
-      <h2 class="clock">00:00</h2>
-      <div class="resolution">
-        <span></span>
-      </div>
-      <nav>
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="resolution.html">Resolutions</a></li>
-        </ul>
-      </nav>
-    </header>
     <main>
-      <form class="todo-form">
+      <form class="name-form hidden">
         <input
-          class="todo-form__input"
           type="text"
+          name="name"
+          class="name-form__input"
+          placeholder="Put in your name."
           required
-          placeholder="Add your to do." />
+          autocomplete="off" />
         <input
-          class="todo-form__add"
           type="submit"
-          value="Add" />
+          class="name-form__submit"
+          value="Register" />
       </form>
+      <div class="home-box">
+        <ul class="todo-list"></ul>
+        <div class="home-box__right">
+          <div class="home-box__right__top">
+            <div>
+              <h2 class="clock">00:00</h2>
+              <!--       
+                <div id="weather">
+                  <span></span>
+                  <span></span>
+                </div> -->
+              <div class="quote">
+                <span></span>
+                <span></span>
+              </div>
+            </div>
+          </div>
+          <div class="home-box__right__bottom">
+            <h2 class="username"></h2>
+            <form class="todo-form">
+              <input
+                class="todo-form__input"
+                type="text"
+                required
+                placeholder="Add your to do."
+                autocomplete="off" />
+              <input
+                class="todo-form__submit"
+                type="submit"
+                value="Add" />
+            </form>
+          </div>
+        </div>
+      </div>
     </main>
     <script src="js/clock.js"></script>
     <script src="js/home.js"></script>
+    <script src="js/todo.js"></script>
+    <script src="js/quote.js"></script>
+    <!-- <script src="js/weather.js"></script> -->
   </body>
 </html>
